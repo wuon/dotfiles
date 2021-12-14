@@ -1,0 +1,121 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "final_space": true,
+  "osc99": false,
+  "console_title": false,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "horizontal_offset": 0,
+      "vertical_offset": 0,
+      "segments": [
+        {
+          "type": "path",
+          "style": "plain",
+          "invert_powerline": false,
+          "foreground": "cyan",
+          "properties": {
+            "prefix": "<#969faf>\u250c</> ",
+            "style": "full"
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "invert_powerline": false,
+          "foreground": "#ff94df",
+          "properties": {
+            "prefix": "<#ffffff>on </> ",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true,
+            "branch_icon": "",
+            "github_icon": "",
+            "branch_ahead_icon": "<#08ff83>\uf176 </>",
+            "branch_behind_icon": "<#ff6961>\uf175 </>",
+            "local_working_icon": "<#Fdfd96>\u002a </>",
+            "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uF692 {{ .StashCount }}{{ end }}"
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "node",
+          "style": "plain",
+          "foreground": "#68a063",
+          "properties": {
+            "display_version": true,
+            "prefix": "v",
+            "postfix": " <#969faf>|</> ",
+            "display_mode": "files"
+          }
+        },
+        {
+          "type": "ruby",
+          "style": "plain",
+          "foreground": "#DE3F24",
+          "properties": {
+            "display_version": true,
+            "prefix": "v",
+            "postfix": " <#969faf>|</> ",
+            "display_mode": "files"
+          }
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "#FED142",
+          "properties": {
+            "fetch_virtual_env": false,
+            "prefix": "v",
+            "postfix": " <#969faf>|</> ",
+            "display_mode": "context",
+            "template": "{{ .Full }}"
+          }
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#ffd7b1",
+          "properties": {
+            "prefix": "",
+            "postfix": "",
+            "time_format": "15:04:05"
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#969faf",
+          "properties": {
+            "prefix": "",
+            "postfix": "",
+            "text": "\u2514 "
+          }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#08ff83",
+          "properties": {
+            "prefix": "",
+            "postfix": "",
+            "text": "\ue349"
+          }
+        }
+      ]
+    }
+  ]
+}
